@@ -1,0 +1,13 @@
+#!/bin/bash
+
+read -p "请输入一个值: " input
+
+# 只匹配正整数（不允许负数）
+if [[ "$input" =~ ^[0-9]+$ ]]; then
+    echo "输入的是一个正整数"
+else
+    echo "输入的不是一个正整数"
+fi
+
+
+
