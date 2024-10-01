@@ -1,0 +1,21 @@
+#install rabbitmq
+
+version: '3'
+services:
+        rabbitmq:
+                image: rabbitmq:3.10-management
+                hostname: VM-28-4-centos
+                container_name: rabbitmq3.10
+                restart: always
+                ports:
+                        - 5672:5672
+                        - 80:15672
+                volumes:
+                        - ./data:/var/lib/rabbitmq
+                        - ./rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
+                        - ./logs:/var/log/rabbitmq
+                environment:
+                        - RABBITMQ_LOGS=
+                        - RABBITMQ_LOGS_BASE=/var/log/rabbitmq
+                        
+ 

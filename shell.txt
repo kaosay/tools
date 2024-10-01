@@ -38,6 +38,8 @@ rpm
 
 chown
 
+chmod
+
 tar
 
 chkconfig
