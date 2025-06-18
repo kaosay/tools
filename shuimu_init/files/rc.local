@@ -1,0 +1,3 @@
+#!/bin/sh -e
+/home/ubuntu/shuimu_init/bin/load_images.sh
+exit 0

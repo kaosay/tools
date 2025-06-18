@@ -1,0 +1,12 @@
+#! /bin/sh
+
+cat /proc/modules | grep -e "^nvidia " >/dev/null 2>&1
+if [ "${?}" != "0" ]; then
+	echo "nvidia driver modules are not yet loaded, invoking runc directly"
+	exec runc "$@"
+fi
+
+PATH=/usr/local/nvidia/toolkit:$PATH \
+XDG_CONFIG_HOME=/usr/local/nvidia/toolkit/.config \
+/usr/local/nvidia/toolkit/nvidia-container-runtime.cdi.real \
+	"$@"

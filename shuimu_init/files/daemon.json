@@ -1,0 +1,17 @@
+{
+    "default-runtime": "nvidia",
+    "runtimes": {
+        "nvidia": {
+            "args": [],
+            "path": "/usr/local/nvidia/toolkit/nvidia-container-runtime"
+        },
+        "nvidia-cdi": {
+            "args": [],
+            "path": "/usr/local/nvidia/toolkit/nvidia-container-runtime.cdi"
+        },
+        "nvidia-legacy": {
+            "args": [],
+            "path": "/usr/local/nvidia/toolkit/nvidia-container-runtime.legacy"
+        }
+    }
+}

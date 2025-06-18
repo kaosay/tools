@@ -1,0 +1,5 @@
+#! /bin/sh
+PATH=/usr/local/nvidia/toolkit:$PATH \
+/usr/local/nvidia/toolkit/nvidia-container-runtime-hook.real \
+	-config "/usr/local/nvidia/toolkit/.config/nvidia-container-runtime/config.toml" \
+	"$@"

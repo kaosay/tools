@@ -1,0 +1,4 @@
+#! /bin/sh
+PATH=/usr/local/nvidia/toolkit:$PATH \
+/usr/local/nvidia/toolkit/nvidia-cdi-hook.real \
+	"$@"
