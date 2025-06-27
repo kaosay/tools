@@ -28,3 +28,4 @@ for id in "${ids[@]}"; do
         fi
     done
 done
+
