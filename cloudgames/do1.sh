@@ -4,7 +4,8 @@
 file="/etc/default/grub"
 
 # 使用 sed 命令修改文件中的特定行
-sed -i "s/GRUB_CMDLINE_LINUX_DEFAULT=\"quiet splash\"/GRUB_CMDLINE_LINUX_DEFAULT=\"quiet splash intel_iommu=on\"/" "$file"
+#sed -i "s/GRUB_CMDLINE_LINUX_DEFAULT=\"quiet splash\"/GRUB_CMDLINE_LINUX_DEFAULT=\"quiet splash intel_iommu=on\"/" "$file"
+sed -i "s/GRUB_CMDLINE_LINUX_DEFAULT=\"\"/GRUB_CMDLINE_LINUX_DEFAULT=\"quiet splash intel_iommu=on\"/" "$file"
 
 # 更新 grub 配置
 sudo update-grub
